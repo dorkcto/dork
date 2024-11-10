@@ -1335,6 +1335,7 @@ section,
 
 .contract-div {
   display: flex;
+  font-size: x-small;
   align-items: center;
   font-family: Arial, sans-serif;
   border: 2px solid #4CAF50; /* Ramka wokół kontenera */
