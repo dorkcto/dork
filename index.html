@@ -60,7 +60,14 @@
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <h2>$dork</h2>
             <p>Meet Dork – the thumb-themed memetoken that’s all about embracing your inner nerd! Dork is a quirky, glasses-wearing thumb bringing humor and community to the crypto world. Here, we don’t take ourselves too seriously—Dork’s value grows with every laugh, meme, and share! Dive in for the fun, join our Dork-loving community, and be part of a meme-driven adventure that’s as unique as it is weird.</p>
-            <div class="d-flex">
+            <div class="contract-div">
+              <div class="contract-address" id="contractAddress">2Hj45C2bjvszU3kGvPf6uc1Ui1f4wj4QMEMWmfexpump</div>
+              <button class="copy-btn" onclick="copyToClipboard()" id="copyButton">
+                  <i class="bi bi-clipboard"></i>
+              </button>
+          </div>
+          
+          <div class="d-flex">
               <a href="https://x.com/dorkcto"><img src="/assets/img/x.png" height="64px"></img></a>
               <a href="https://t.me/DORKCTOPORTAL"><img src="/assets/img/tg.png" height="64"></img></a>
               <a href="https://www.dextools.io/app/en/solana/pair-explorer/DwUF2eh49e7ey91q76FvwvLSn9tNKPkk1zCxh8iVCmj5?t=1731226522971"><img src="/assets/img/dext.png" height="64"></img></a>
@@ -83,29 +90,34 @@
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-easel"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Lorem Ipsum</a></h4>
+                <div class="icon"><i class="bi bi-1-square"></i></i></div>
+                <h4 class="title"><a href="" class="stretched-link">Create a Wallet</a></h4>
+                <p>Download phantom or wallet app of your choice from the app store or google play store for free.</p>
               </div>
             </div><!--End Icon Box -->
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-gem"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Sed ut perspiciatis</a></h4>
+                <div class="icon"><i class="bi bi-2-square"></i></div>
+                <h4 class="title"><a href="" class="stretched-link">Get some SOL
+                </a></h4>
+                <p>Have SOL in your wallet to swap to $dork. If you don’t have any SOL, you can buy on another exchange and send it to your wallet.</p>
               </div>
             </div><!--End Icon Box -->
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-geo-alt"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Magni Dolores</a></h4>
+                <div class="icon"><i class="bi bi-3-square"></i></div>
+                <h4 class="title"><a href="" class="stretched-link">Go to Raydium</a></h4>
+                <p>Go to Raydium. Connect your wallet and paste the $dork token address into Raydium, select dork, and confirm. When your wallet prompts you for a wallet signature, sign.</p>
               </div>
             </div><!--End Icon Box -->
 
             <div class="col-xl-3 col-md-6">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-command"></i></div>
-                <h4 class="title"><a href="" class="stretched-link">Nemo Enim</a></h4>
+                <div class="icon"><i class="bi bi-4-square"></i></div>
+                <h4 class="title"><a href="" class="stretched-link">Swap SOL for $dork</a></h4>
+                <p>Swap SOL for $dork. We have ZERO taxes so you don’t need to worry about buying with a specific slippage, although you may need to use slippage during times of market volatility.</p>
               </div>
             </div><!--End Icon Box -->
 
@@ -147,6 +159,24 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function copyToClipboard() {
+        const contractAddress = document.getElementById("contractAddress").innerText;
+        navigator.clipboard.writeText(contractAddress).then(() => {
+            const buttonIcon = document.getElementById("copyButton").querySelector("i");
+            buttonIcon.classList.remove("bi-clipboard");
+            buttonIcon.classList.add("bi-clipboard-check");
+            setTimeout(() => {
+                buttonIcon.classList.remove("bi-clipboard-check");
+                buttonIcon.classList.add("bi-clipboard");
+            }, 2000);
+        }).catch((err) => {
+            console.error("Błąd podczas kopiowania: ", err);
+        });
+    }
+</script>
+
 
 </body>
 

@@ -1332,3 +1332,30 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.contract-div {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  border: 2px solid #4CAF50; /* Ramka wokół kontenera */
+  padding: 8px; /* Odstęp wewnątrz kontenera */
+  border-radius: 5px; /* Zaokrąglenie narożników */
+  max-width: fit-content; /* Dostosowanie szerokości do zawartości */
+}
+.contract-address {
+  margin-right: 10px;
+  font-weight: bold;
+  white-space: nowrap; /* Zapobiega łamaniu tekstu */
+}
+.copy-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #4CAF50;
+  display: flex;
+  align-items: center;
+}
+.copy-btn:focus {
+  outline: none;
+}
