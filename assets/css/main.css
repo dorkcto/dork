@@ -1337,14 +1337,15 @@ section,
   display: flex;
   align-items: center;
   font-family: Arial, sans-serif;
-  border: 2px solid #4CAF50;
-  border-radius: 5px;
-  max-width: fit-content;
+  border: 2px solid #4CAF50; /* Ramka wokół kontenera */
+  padding: 8px; /* Odstęp wewnątrz kontenera */
+  border-radius: 5px; /* Zaokrąglenie narożników */
+  max-width: fit-content; /* Dostosowanie szerokości do zawartości */
 }
 .contract-address {
   margin-right: 10px;
   font-weight: bold;
-  white-space: nowrap;
+  white-space: nowrap; /* Zapobiega łamaniu tekstu */
 }
 .copy-btn {
   background: none;

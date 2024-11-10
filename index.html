@@ -61,7 +61,7 @@
             <h2>$dork</h2>
             <p>Meet Dork – the thumb-themed memetoken that’s all about embracing your inner nerd! Dork is a quirky, glasses-wearing thumb bringing humor and community to the crypto world. Here, we don’t take ourselves too seriously—Dork’s value grows with every laugh, meme, and share! Dive in for the fun, join our Dork-loving community, and be part of a meme-driven adventure that’s as unique as it is weird.</p>
             <div class="contract-div">
-              <div class="contract-address" id="contractAddress">2Hj45C2bjvszU3kGvPf6uc1Ui1f4wj4QMEMWmfexpump</div>
+              <div class="contract-address" id="contractAddressShort">2Hj45C2bjvszU3kGvPf6uc1Ui1f4...</div>
               <button class="copy-btn" onclick="copyToClipboard()" id="copyButton">
                   <i class="bi bi-clipboard"></i>
               </button>
@@ -162,8 +162,9 @@
 
   <script>
     function copyToClipboard() {
-        const contractAddress = document.getElementById("contractAddress").innerText;
-        navigator.clipboard.writeText(contractAddress).then(() => {
+        const contractAddressFull = "2Hj45C2bjvszU3kGvPf6uc1Ui1f4wj4QMEMWmfexpump";
+        
+        navigator.clipboard.writeText(contractAddressFull).then(() => {
             const buttonIcon = document.getElementById("copyButton").querySelector("i");
             buttonIcon.classList.remove("bi-clipboard");
             buttonIcon.classList.add("bi-clipboard-check");
@@ -176,6 +177,7 @@
         });
     }
 </script>
+
 
 
 </body>
